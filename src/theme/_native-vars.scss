@@ -1,3 +1,6 @@
 :root {
-  --color-elevation-background: rgba(28, 28, 28, 1);
+  --color-elevation-background-opaque: rgba(28, 28, 28, 1);
+  --color-elevation-background: rgba(28, 28, 28, 0.8);
+
+  --color-font-primary: rgba(255, 255, 255, 1);
 }

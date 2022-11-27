@@ -1,0 +1,21 @@
+@use "partials/vars";
+
+/* font-family: NMSGeoSans */
+@import url("https://font.nmscd.com/assets/font/NMSGeoSans_Kerned/Web-TT/NMSGeoSans_Kerned.css");
+
+h1 {
+  font-size: 32px;
+  margin: vars.$spacing-xl 0 vars.$spacing-md;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 24px;
+  margin: vars.$spacing-lg 0 vars.$spacing-sm;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 24px;
+  margin: vars.$spacing-sm 0;
+}

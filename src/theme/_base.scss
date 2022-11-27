@@ -1,4 +1,9 @@
+// partials
+@use "partials/vars";
+
+// import once
 @use "./native-vars";
+@use "./fonts/fonts";
 
 html,
 body,
@@ -11,4 +16,6 @@ body,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: vars.$font-family-main;
+  color: var(--color-font-primary);
 }
