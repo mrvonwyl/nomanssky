@@ -1,1 +1,3 @@
-{{ glyphs }}
+<span *ngFor="let glyphChunk of glyphs | glyphSeparator">
+  {{ glyphChunk }}
+</span>

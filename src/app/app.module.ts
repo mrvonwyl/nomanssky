@@ -8,6 +8,7 @@ import { GlyphsComponent } from './components/glyphs/glyphs.component';
 import { GlyherComponent } from './containers/glyher/glyher.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { GlyphSeparatorPipe } from './pipes/glyph-separator.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppLayoutComponent,
     GlyherComponent,
     GlyphsComponent,
+    GlyphSeparatorPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

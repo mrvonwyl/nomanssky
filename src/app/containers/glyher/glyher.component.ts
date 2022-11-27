@@ -78,7 +78,7 @@ export class GlyherComponent implements OnInit, OnDestroy {
             .join('');
         }),
         map((sanitizedGlyphs) => {
-          return sanitizedGlyphs.substring(0, MAX_INPUT_LENGTH - 1);
+          return sanitizedGlyphs.substring(0, MAX_INPUT_LENGTH);
         }),
         tap((sanitizedValue) => {
           this.glyphHexInput.patchValue(sanitizedValue, { emitEvent: false });
