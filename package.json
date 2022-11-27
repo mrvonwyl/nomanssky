@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "git:lfs:init": "git lfs install && git lfs track \"*.jpg\"",
+    "postinstall": "npm run git:lfs:init"
   },
   "private": true,
   "dependencies": {

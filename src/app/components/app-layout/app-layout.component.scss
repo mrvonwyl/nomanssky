@@ -1,0 +1,15 @@
+@use "partials/vars";
+
+:host {
+  align-self: center;
+
+  display: block;
+  width: 100%;
+  max-width: vars.$content-width;
+
+  margin: 0 vars.$spacing-m;
+}
+
+.content {
+  background: var(--color-elevation-background);
+}
