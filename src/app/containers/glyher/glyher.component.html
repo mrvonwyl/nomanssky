@@ -5,10 +5,15 @@
   and their visual representation.
 </p>
 
-<h2>Converter</h2>
+<h2>Glyph Code Parser</h2>
 <p>Input a Glyph Code (HEX notation).</p>
 <p>
-  <input type="text" placeholder="Glyphs" [formControl]="glyphHexInput" />
+  <input
+    class="glyphHexInput"
+    type="text"
+    placeholder="Glyphs"
+    [formControl]="glyphHexInput"
+  />
 </p>
 <p>
   <app-glyphs
