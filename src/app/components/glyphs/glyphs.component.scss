@@ -4,4 +4,23 @@
   font-size: 50px;
   font-family: vars.$font-family-glyph;
   word-break: break-all;
+
+  transition: text-shadow 100ms ease-in-out;
+
+  text-shadow: 0 0 10px var(--color-font-primary),
+    0 0 20px var(--color-font-primary), 0 0 30px var(--color-tint-accent-base),
+    0 0 40px var(--color-tint-accent-base),
+    0 0 50px var(--color-tint-accent-base),
+    0 0 60px var(--color-tint-accent-base),
+    0 0 70px var(--color-tint-accent-base);
+
+  &:hover {
+    text-shadow: 0 0 10px var(--color-font-primary),
+      0 0 30px var(--color-font-primary), 0 0 30px var(--color-tint-accent-base),
+      0 0 40px var(--color-tint-accent-base),
+      0 0 50px var(--color-tint-accent-base),
+      0 0 60px var(--color-tint-accent-base),
+      0 0 70px var(--color-tint-accent-base),
+      0 0 80px var(--color-tint-accent-base);
+  }
 }

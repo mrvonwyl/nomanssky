@@ -2,26 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { filter, map, Subject, takeUntil } from 'rxjs';
+import { GlyphValues } from 'src/app/models/glyph.models';
 
 const MAX_INPUT_LENGTH = 16;
-const GLYPH_CHARACTERS = [
-  '0',
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9',
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-];
 
 @Component({
   selector: 'app-glyher',
@@ -58,7 +41,7 @@ export class GlyherComponent implements OnInit, OnDestroy {
           return upperCaseGlyphInput
             .split('')
             .filter((character) => {
-              return GLYPH_CHARACTERS.includes(character);
+              return GlyphValues.includes(character);
             })
             .join('');
         }),
@@ -66,7 +49,6 @@ export class GlyherComponent implements OnInit, OnDestroy {
           return sanitizedGlyphs.substring(0, MAX_INPUT_LENGTH - 1);
         })
       )
-
       .subscribe((sanitizedValue) => {
         this.glyphHexInput.patchValue(sanitizedValue, { emitEvent: false });
       });
