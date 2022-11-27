@@ -1,0 +1,20 @@
+@use "partials/vars";
+@use "partials/colors";
+
+input[type="text"] {
+  border: none;
+
+  color: var(--color-tint-accent-contrast);
+  background: var(--color-elevation-background-input);
+  border-bottom: var(--border-accent);
+
+  font-size: 24px;
+
+  padding: vars.$spacing-xs vars.$spacing-sm;
+
+  outline: none;
+
+  &:focus-visible {
+    border-bottom: var(--border-accent-soft);
+  }
+}

@@ -1,0 +1,7 @@
+@use "partials/vars";
+
+:host {
+  font-size: 50px;
+  font-family: vars.$font-family-glyph;
+  word-break: break-all;
+}

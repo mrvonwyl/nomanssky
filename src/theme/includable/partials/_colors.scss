@@ -1,0 +1,4 @@
+@mixin accent() {
+  background-color: var(--color-tint-accent);
+  color: var(--color-tint-accent-contrast);
+}

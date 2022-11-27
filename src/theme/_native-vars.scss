@@ -1,6 +1,26 @@
+/*
+https://maketintsandshades.com/#7E1111
+20 % steps ligher and darker, respectively
+*/
+
+$red-lightest: rgba(203, 160, 160, 1);
+$red-lighter: rgba(178, 112, 112, 1);
+$red-light: rgba(152, 65, 65, 1);
+$red-base: rgba(126, 17, 17, 1);
+$red-dark: rgba(101, 14, 14, 1);
+$red-darker: rgba(76, 10, 10, 1);
+$red-darkest: rgba(50, 7, 7, 1);
+
 :root {
   --color-elevation-background-opaque: rgba(28, 28, 28, 1);
   --color-elevation-background: rgba(28, 28, 28, 0.8);
+  --color-elevation-background-input: rgba(38, 38, 38, 0.8);
 
   --color-font-primary: rgba(255, 255, 255, 1);
+
+  --color-tint-accent: $red-base;
+  --color-tint-accent-contrast: rgba(255, 255, 255, 1);
+
+  --border-accent: 2px solid #{$red-base};
+  --border-accent-soft: 2px solid #{$red-dark};
 }

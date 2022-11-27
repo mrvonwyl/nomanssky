@@ -2,8 +2,9 @@
 @use "partials/vars";
 
 // import once
-@use "./native-vars";
 @use "./fonts/fonts";
+@use "./forms";
+@use "./native-vars";
 
 html,
 body,

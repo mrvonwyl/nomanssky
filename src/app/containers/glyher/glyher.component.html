@@ -6,3 +6,13 @@
 </p>
 
 <h2>Converter</h2>
+<p>Input a Glyph Code (HEX values).</p>
+<p>
+  <input type="text" placeholder="Glyphs" [formControl]="glyphHexInput" />
+</p>
+<p>
+  <app-glyphs
+    *ngIf="glyphHexInput.value as glyphs"
+    [glyphs]="glyphs"
+  ></app-glyphs>
+</p>

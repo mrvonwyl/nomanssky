@@ -3,6 +3,11 @@
 /* font-family: NMSGeoSans */
 @import url("https://font.nmscd.com/assets/font/NMSGeoSans_Kerned/Web-TT/NMSGeoSans_Kerned.css");
 
+@font-face {
+  font-family: vars.$font-family-glyph;
+  src: url("/assets/fonts/NMS-Glyphs-Mono.woff2");
+}
+
 h1 {
   font-size: 32px;
   margin: vars.$spacing-xl 0 vars.$spacing-md;
