@@ -1,18 +1,21 @@
 @use "partials/vars";
 @use "partials/colors";
 
-input[type="text"] {
-  border: none;
-
-  color: var(--color-tint-accent-base-contrast);
-  background: var(--color-elevation-background-input);
-  border-bottom: var(--border-accent);
+button {
   font-size: 24px;
+  border: none;
+  color: var(--color-tint-accent-base-contrast);
+  background: var(--color-tint-accent-base);
   padding: vars.$spacing-xs vars.$spacing-sm;
   outline: none;
   border-radius: vars.$border-radius;
+  cursor: pointer;
 
-  &:focus-visible {
-    border-bottom: var(--border-accent-soft);
+  &:hover {
+    background: var(--color-tint-accent-light);
+  }
+
+  & + button {
+    margin-left: vars.$spacing-md;
   }
 }

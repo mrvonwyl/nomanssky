@@ -21,3 +21,18 @@
     [glyphs]="glyphs"
   ></app-glyphs>
 </p>
+<h2>Glphy Code Generator</h2>
+<div class="glyphButtonWrapper">
+  <app-glyph-button
+    *ngFor="let glyph of GlyphValues"
+    [glyph]="glyph"
+    (clicked)="onGlyphButtonClick($event)"
+  ></app-glyph-button>
+</div>
+<p>
+  {{ glyphHexOutput }}
+</p>
+<p>
+  <button (click)="clearGlyphHexOutput()">Clear</button>
+  <button (click)="deleteGlyphHexOutput()">Delete</button>
+</p>

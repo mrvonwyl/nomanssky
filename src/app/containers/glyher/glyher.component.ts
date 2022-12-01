@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter, map, Observable, Subject, takeUntil, tap } from 'rxjs';
-import { GlyphValues } from 'src/app/models/glyph.models';
+import { GlyphValue, GlyphValues } from 'src/app/models/glyph.models';
 
 const MAX_INPUT_LENGTH = 12;
 
@@ -12,7 +12,10 @@ const MAX_INPUT_LENGTH = 12;
   styleUrls: ['./glyher.component.scss'],
 })
 export class GlyherComponent implements OnInit, OnDestroy {
+  GlyphValues = GlyphValues;
   glyphHexInput = new FormControl('');
+
+  glyphHexOutput = '';
 
   private readonly destroyed$ = new Subject();
 
@@ -29,6 +32,22 @@ export class GlyherComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroyed$.next(null);
     this.destroyed$.complete();
+  }
+
+  onGlyphButtonClick(event: GlyphValue): void {
+    if (this.glyphHexOutput.length < MAX_INPUT_LENGTH) {
+      this.glyphHexOutput = this.glyphHexOutput.concat(event);
+    }
+  }
+
+  clearGlyphHexOutput(): void {
+    this.glyphHexOutput = '';
+  }
+  deleteGlyphHexOutput(): void {
+    this.glyphHexOutput = this.glyphHexOutput.substring(
+      0,
+      this.glyphHexOutput.length - 1
+    );
   }
 
   private observeGlyphRouteParam(): void {
@@ -73,7 +92,7 @@ export class GlyherComponent implements OnInit, OnDestroy {
           return upperCaseGlyphInput
             .split('')
             .filter((character) => {
-              return GlyphValues.includes(character);
+              return GlyphValues.includes(character as GlyphValue);
             })
             .join('');
         }),

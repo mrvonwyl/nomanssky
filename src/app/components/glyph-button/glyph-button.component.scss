@@ -1,0 +1,17 @@
+@use "partials/vars";
+
+:host {
+  border: var(--border-accent);
+  width: 70px;
+  aspect-ratio: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: vars.$border-radius;
+
+  &:hover {
+    border: var(--border-accent-soft);
+  }
+}

@@ -1,4 +1,21 @@
+@use "partials/vars";
+
 .glyphHexInput {
   width: 330px;
   max-width: 100%;
+}
+
+.glyphButtonWrapper {
+  padding: vars.$spacing-sm;
+  background: var(--color-elevation-background-input);
+  border-bottom: var(--border-accent);
+
+  display: inline-grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: vars.$spacing-xs;
+  border-radius: vars.$border-radius;
+
+  &:hover {
+    border-bottom: var(--border-accent-soft);
+  }
 }

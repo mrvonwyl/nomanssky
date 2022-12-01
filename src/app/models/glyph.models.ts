@@ -2,7 +2,6 @@ export type GlyphValue = typeof GlyphValues[number];
 
 export type Glyph = {
   value: GlyphValue;
-
   name: string;
   legacyName: string;
 };
@@ -24,7 +23,7 @@ export const GlyphValues = [
   'D',
   'E',
   'F',
-];
+] as const;
 
 export const Glyphs: Glyph[] = [
   { value: '0', name: 'Star Over Water', legacyName: 'sunset' },

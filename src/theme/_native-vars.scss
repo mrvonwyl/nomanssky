@@ -20,6 +20,7 @@ $accent-darkest: rgba(11, 39, 47, 1);
 
   --color-tint-accent-base: #{$accent-base};
   --color-tint-accent-base-contrast: rgba(255, 255, 255, 1);
+  --color-tint-accent-light: #{$accent-light};
 
   --border-accent: 2px solid #{$accent-base};
   --border-accent-soft: 2px solid #{$accent-light};
