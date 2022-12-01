@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-const DEFAULT_CHUNK_SIZE = 4;
+const DEFAULT_CHUNK_SIZE = 3;
 
 @Pipe({
   name: 'glyphSeparator',

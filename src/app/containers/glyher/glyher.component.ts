@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { filter, map, Observable, Subject, takeUntil, tap } from 'rxjs';
 import { GlyphValues } from 'src/app/models/glyph.models';
 
-const MAX_INPUT_LENGTH = 16;
+const MAX_INPUT_LENGTH = 12;
 
 @Component({
   selector: 'app-glyher',
